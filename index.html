@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau Embdedding 💫</title>
+
+    <!-- Link to Skeleton Style Sheet which makes it look nicer
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" /> -->
+
+    <!--Link to Skeleton Style Sheet which makes it look nicer-->
+    <link rel="stylesheet" href=".\styles.css"/>
+
+
+  </head>
+  <script
+    type="module"
+    src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+  ></script>
+  <script src = ".\script.js" defer></script>
+  </script>
+  <body>
+    <h1>B2S Embedding Websites</h1>
+
+    <fieldset id = "first-set-of-buttons">
+        <legend>Filter by Region</legend>
+        <input type = "button" value = "West region only" id = "west-region" />
+        <input type = "button" value = "Clear Filter" id = "clear-filter" />
+        <input type = "button" value = "Undo" id = "undo-button" />
+    </fieldset>
+
+    <fieldset id = "second-set-of-buttons">
+        <legend>Profit Filter</legend>
+        <input type = "number" placeholder="Min Value" id = "min-value" /> 
+        <input type = "number" placeholder="Max Value" id = "max-value" />
+        <input type = "button" value = "Apply" id = "apply-button" />
+    </fieldset>
+
+    <div class="content">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/SuperstoreProfitAnalysis_17217401707110/Overview"
+        toolbar="bottom"
+        height="110vh"
+        width="200vw"
+      ></tableau-viz>
+    </div>
+  </body>
+</html>
